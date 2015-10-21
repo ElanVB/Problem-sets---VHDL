@@ -1,0 +1,233 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.865
+TNS   : -55.998
+
+Type  : Slow 1200mV 85C Model Setup 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.820
+TNS   : -3.947
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'BUTTON[0]'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Slow 1200mV 85C Model Recovery 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.829
+TNS   : -6.632
+
+Type  : Slow 1200mV 85C Model Recovery 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : -0.212
+TNS   : -0.212
+
+Type  : Slow 1200mV 85C Model Recovery 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.094
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -0.287
+TNS   : -0.817
+
+Type  : Slow 1200mV 85C Model Removal 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'BUTTON[0]'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : 0.878
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -30.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.345
+TNS   : -46.912
+
+Type  : Slow 1200mV 0C Model Setup 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.609
+TNS   : -2.757
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.742
+TNS   : -5.936
+
+Type  : Slow 1200mV 0C Model Recovery 'BUTTON[0]'
+Slack : -0.664
+TNS   : -0.664
+
+Type  : Slow 1200mV 0C Model Recovery 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : -0.086
+TNS   : -0.086
+
+Type  : Slow 1200mV 0C Model Recovery 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.067
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -0.155
+TNS   : -0.441
+
+Type  : Slow 1200mV 0C Model Removal 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'BUTTON[0]'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : 0.783
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -30.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.744
+TNS   : -20.615
+
+Type  : Fast 1200mV 0C Model Setup 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.022
+TNS   : -0.022
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -0.307
+TNS   : -2.456
+
+Type  : Fast 1200mV 0C Model Recovery 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -0.082
+TNS   : -0.246
+
+Type  : Fast 1200mV 0C Model Recovery 'BUTTON[0]'
+Slack : -0.039
+TNS   : -0.039
+
+Type  : Fast 1200mV 0C Model Recovery 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -0.331
+TNS   : -0.979
+
+Type  : Fast 1200mV 0C Model Removal 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : 0.047
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'BUTTON[0]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : 0.490
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -38.266
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -4.471
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|INCR_INSTR_NUMBER_NE'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_SOURCE:clk0|CPU_CLK_SIG'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CONTROLLER_FSM:contr0|RESET_INSTR_NUMBER'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

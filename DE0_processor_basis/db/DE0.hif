@@ -1,0 +1,598 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+INSTRUCTION_READER
+# storage
+db|DE0.(1).cnf
+db|DE0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+INSTRUCTION_READER.vhd
+56ff1b83de7f7d3acbd9103c9c0aa86
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(instr_number)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(instr_byte1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(instr_byte2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(fl_addr)
+21 downto 0
+PARAMETER_STRING
+USR
+ constraint(fl_dq)
+14 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+INSTRUCTION_READER:instr0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+REGISTER_BANK
+# storage
+db|DE0.(2).cnf
+db|DE0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+REGISTER_BANK.vhd
+c26b9059f430676bfe9a4e6ed873fb70
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(d)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(re_addr)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(wr_addr)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+REGISTER_BANK:bank0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+BYTE_REGISTER
+# storage
+db|DE0.(3).cnf
+db|DE0.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+BYTE_REGISTER.vhd
+8358a34a4f4581538871e97631fd62
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(d)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15
+BYTE_REGISTER:specreg0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+D_FLIPFLOP
+# storage
+db|DE0.(4).cnf
+db|DE0.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+D_FLIPFLOP.vhd
+2139df2c9abcf1b118b6bc807fa7494f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop7
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop0
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop1
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop2
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop3
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop4
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop5
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop6
+REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop7
+SEG_DISPLAY:disp0|D_FLIPFLOP:ff0
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop0
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop1
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop2
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop3
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop4
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop5
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop6
+BYTE_REGISTER:specreg0|D_FLIPFLOP:flipflop7
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SEG_DISPLAY
+# storage
+db|DE0.(5).cnf
+db|DE0.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+7SEG_DISPLAY.vhd
+1315a556469c47f56d57d1c0a726fa
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(nib0)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(nib1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(hex0_d)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex1_d)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex2_d)
+0 to 6
+PARAMETER_STRING
+USR
+ constraint(hex3_d)
+0 to 6
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+SEG_DISPLAY:disp0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+CONTROLLER_FSM
+# storage
+db|DE0.(6).cnf
+db|DE0.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+CONTROLLER_FSM.vhd
+e88fd6527b60edc0d0c128478eca989
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(instr)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+CONTROLLER_FSM:contr0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+ADDER
+# storage
+db|DE0.(7).cnf
+db|DE0.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ADDER.vhd
+2891edcc9cbce2cb22e11418591323
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ADDER:arith0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+COMPARATOR
+# storage
+db|DE0.(8).cnf
+db|DE0.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+COMPARATOR.vhd
+43e6433a68142bbd2c7b50933e8818
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+COMPARATOR:comp0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+CLK_SOURCE
+# storage
+db|DE0.(9).cnf
+db|DE0.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+CLK_SOURCE.vhd
+239f595d3d773657839f19be8f285f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CLK_SOURCE:clk0
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+DE0
+# storage
+db|DE0.(0).cnf
+db|DE0.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+DE0.vhd
+1fa55aee25c13838d5fb0e3dfa5b094
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|..|program files (x86)|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

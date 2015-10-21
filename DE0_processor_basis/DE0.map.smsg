@@ -1,0 +1,5 @@
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: The following bidir pins have no drivers
+Warning: The following tri-state nodes are fed by constants
+Warning: TRI or OPNDRN buffers permanently enabled
+Warning: Output pins are stuck at VCC or GND

@@ -1,0 +1,16 @@
+-- testing the WR, D0, D1, NO, JU, and AD instructions
+
+CODE	NO TAGS	INSTRUCTION
+---------------------------
+0000	00	WR 00 to 0
+0101	01	WR 01 to 1
+40F1	02 Tag1	AD 1 to 0 in 0
+20FF	03	D0 0
+FFFF	04	NO
+FFFF	05	NO
+FFFF	06	NO
+FFFF	07	NO
+30FF	08	D1 0
+40F1	09	AD 1 to 0 in 0
+20FF	0A	D0 0
+6F02	0B	JU TAG1

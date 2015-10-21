@@ -1,0 +1,8 @@
+-- testing the WR, D0, and D1 instructions
+
+CODE	NO TAGS	INSTRUCTION
+---------------------------
+0012	00	WR 12 to 0
+0134	01	WR 34 to 1
+21FF	02	D0 1
+30FF	03	D1 0

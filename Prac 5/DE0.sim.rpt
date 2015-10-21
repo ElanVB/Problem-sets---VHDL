@@ -1,0 +1,911 @@
+Simulator report for DE0
+Thu Apr 16 15:20:06 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 3.0 ms       ;
+; Simulation Netlist Size     ; 624 nodes    ;
+; Simulation Coverage         ;       1.15 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       1.15 % ;
+; Total nodes checked                                 ; 624          ;
+; Total output ports checked                          ; 262          ;
+; Total output ports with complete 1/0-value coverage ; 3            ;
+; Total output ports with no 1/0-value coverage       ; 259          ;
+; Total output ports with no 1-value coverage         ; 259          ;
+; Total output ports with no 0-value coverage         ; 259          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------+
+; Complete 1/0-Value Coverage                          ;
++----------------+------------------+------------------+
+; Node Name      ; Output Port Name ; Output Port Type ;
++----------------+------------------+------------------+
+; |DE0|CLOCK_50  ; |DE0|CLOCK_50    ; padout           ;
+; |DE0|BUTTON[2] ; |DE0|BUTTON[2]   ; padout           ;
+; |DE0|BUTTON[1] ; |DE0|BUTTON[1]   ; padout           ;
++----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |DE0|HEX0_D[6]~output   ; |DE0|HEX0_D[6]~output   ; o                ;
+; |DE0|HEX0_D[5]~output   ; |DE0|HEX0_D[5]~output   ; o                ;
+; |DE0|HEX0_D[4]~output   ; |DE0|HEX0_D[4]~output   ; o                ;
+; |DE0|HEX0_D[3]~output   ; |DE0|HEX0_D[3]~output   ; o                ;
+; |DE0|HEX0_D[2]~output   ; |DE0|HEX0_D[2]~output   ; o                ;
+; |DE0|HEX0_D[1]~output   ; |DE0|HEX0_D[1]~output   ; o                ;
+; |DE0|HEX0_D[0]~output   ; |DE0|HEX0_D[0]~output   ; o                ;
+; |DE0|HEX1_D[6]~output   ; |DE0|HEX1_D[6]~output   ; o                ;
+; |DE0|HEX1_D[5]~output   ; |DE0|HEX1_D[5]~output   ; o                ;
+; |DE0|HEX1_D[4]~output   ; |DE0|HEX1_D[4]~output   ; o                ;
+; |DE0|HEX1_D[3]~output   ; |DE0|HEX1_D[3]~output   ; o                ;
+; |DE0|HEX1_D[2]~output   ; |DE0|HEX1_D[2]~output   ; o                ;
+; |DE0|HEX1_D[1]~output   ; |DE0|HEX1_D[1]~output   ; o                ;
+; |DE0|HEX1_D[0]~output   ; |DE0|HEX1_D[0]~output   ; o                ;
+; |DE0|HEX2_D[6]~output   ; |DE0|HEX2_D[6]~output   ; o                ;
+; |DE0|HEX2_D[5]~output   ; |DE0|HEX2_D[5]~output   ; o                ;
+; |DE0|HEX2_D[4]~output   ; |DE0|HEX2_D[4]~output   ; o                ;
+; |DE0|HEX2_D[3]~output   ; |DE0|HEX2_D[3]~output   ; o                ;
+; |DE0|HEX2_D[2]~output   ; |DE0|HEX2_D[2]~output   ; o                ;
+; |DE0|HEX2_D[1]~output   ; |DE0|HEX2_D[1]~output   ; o                ;
+; |DE0|HEX2_D[0]~output   ; |DE0|HEX2_D[0]~output   ; o                ;
+; |DE0|HEX3_D[6]~output   ; |DE0|HEX3_D[6]~output   ; o                ;
+; |DE0|HEX3_D[5]~output   ; |DE0|HEX3_D[5]~output   ; o                ;
+; |DE0|HEX3_D[4]~output   ; |DE0|HEX3_D[4]~output   ; o                ;
+; |DE0|HEX3_D[3]~output   ; |DE0|HEX3_D[3]~output   ; o                ;
+; |DE0|HEX3_D[2]~output   ; |DE0|HEX3_D[2]~output   ; o                ;
+; |DE0|HEX3_D[1]~output   ; |DE0|HEX3_D[1]~output   ; o                ;
+; |DE0|HEX3_D[0]~output   ; |DE0|HEX3_D[0]~output   ; o                ;
+; |DE0|GPIO0_D[31]~output ; |DE0|GPIO0_D[31]~output ; o                ;
+; |DE0|GPIO0_D[30]~output ; |DE0|GPIO0_D[30]~output ; o                ;
+; |DE0|GPIO0_D[29]~output ; |DE0|GPIO0_D[29]~output ; o                ;
+; |DE0|GPIO0_D[28]~output ; |DE0|GPIO0_D[28]~output ; o                ;
+; |DE0|GPIO0_D[27]~output ; |DE0|GPIO0_D[27]~output ; o                ;
+; |DE0|GPIO0_D[26]~output ; |DE0|GPIO0_D[26]~output ; o                ;
+; |DE0|GPIO0_D[25]~output ; |DE0|GPIO0_D[25]~output ; o                ;
+; |DE0|GPIO0_D[24]~output ; |DE0|GPIO0_D[24]~output ; o                ;
+; |DE0|GPIO0_D[23]~output ; |DE0|GPIO0_D[23]~output ; o                ;
+; |DE0|GPIO0_D[22]~output ; |DE0|GPIO0_D[22]~output ; o                ;
+; |DE0|GPIO0_D[21]~output ; |DE0|GPIO0_D[21]~output ; o                ;
+; |DE0|GPIO0_D[20]~output ; |DE0|GPIO0_D[20]~output ; o                ;
+; |DE0|GPIO0_D[19]~output ; |DE0|GPIO0_D[19]~output ; o                ;
+; |DE0|GPIO0_D[18]~output ; |DE0|GPIO0_D[18]~output ; o                ;
+; |DE0|GPIO0_D[17]~output ; |DE0|GPIO0_D[17]~output ; o                ;
+; |DE0|GPIO0_D[16]~output ; |DE0|GPIO0_D[16]~output ; o                ;
+; |DE0|GPIO0_D[15]~output ; |DE0|GPIO0_D[15]~output ; o                ;
+; |DE0|GPIO0_D[14]~output ; |DE0|GPIO0_D[14]~output ; o                ;
+; |DE0|GPIO0_D[13]~output ; |DE0|GPIO0_D[13]~output ; o                ;
+; |DE0|GPIO0_D[12]~output ; |DE0|GPIO0_D[12]~output ; o                ;
+; |DE0|GPIO0_D[11]~output ; |DE0|GPIO0_D[11]~output ; o                ;
+; |DE0|GPIO0_D[10]~output ; |DE0|GPIO0_D[10]~output ; o                ;
+; |DE0|GPIO0_D[9]~output  ; |DE0|GPIO0_D[9]~output  ; o                ;
+; |DE0|GPIO0_D[8]~output  ; |DE0|GPIO0_D[8]~output  ; o                ;
+; |DE0|GPIO0_D[7]~output  ; |DE0|GPIO0_D[7]~output  ; o                ;
+; |DE0|GPIO0_D[6]~output  ; |DE0|GPIO0_D[6]~output  ; o                ;
+; |DE0|GPIO0_D[5]~output  ; |DE0|GPIO0_D[5]~output  ; o                ;
+; |DE0|GPIO0_D[4]~output  ; |DE0|GPIO0_D[4]~output  ; o                ;
+; |DE0|GPIO0_D[3]~output  ; |DE0|GPIO0_D[3]~output  ; o                ;
+; |DE0|GPIO0_D[2]~output  ; |DE0|GPIO0_D[2]~output  ; o                ;
+; |DE0|GPIO0_D[1]~output  ; |DE0|GPIO0_D[1]~output  ; o                ;
+; |DE0|GPIO0_D[0]~output  ; |DE0|GPIO0_D[0]~output  ; o                ;
+; |DE0|LEDG[0]~output     ; |DE0|LEDG[0]~output     ; o                ;
+; |DE0|LEDG[0]            ; |DE0|LEDG[0]            ; padout           ;
+; |DE0|LEDG[1]~output     ; |DE0|LEDG[1]~output     ; o                ;
+; |DE0|LEDG[1]            ; |DE0|LEDG[1]            ; padout           ;
+; |DE0|LEDG[2]~output     ; |DE0|LEDG[2]~output     ; o                ;
+; |DE0|LEDG[2]            ; |DE0|LEDG[2]            ; padout           ;
+; |DE0|LEDG[3]~output     ; |DE0|LEDG[3]~output     ; o                ;
+; |DE0|LEDG[3]            ; |DE0|LEDG[3]            ; padout           ;
+; |DE0|LEDG[4]~output     ; |DE0|LEDG[4]~output     ; o                ;
+; |DE0|LEDG[4]            ; |DE0|LEDG[4]            ; padout           ;
+; |DE0|LEDG[5]~output     ; |DE0|LEDG[5]~output     ; o                ;
+; |DE0|LEDG[5]            ; |DE0|LEDG[5]            ; padout           ;
+; |DE0|LEDG[6]~output     ; |DE0|LEDG[6]~output     ; o                ;
+; |DE0|LEDG[6]            ; |DE0|LEDG[6]            ; padout           ;
+; |DE0|LEDG[7]~output     ; |DE0|LEDG[7]~output     ; o                ;
+; |DE0|LEDG[7]            ; |DE0|LEDG[7]            ; padout           ;
+; |DE0|LEDG[8]~output     ; |DE0|LEDG[8]~output     ; o                ;
+; |DE0|LEDG[8]            ; |DE0|LEDG[8]            ; padout           ;
+; |DE0|LEDG[9]~output     ; |DE0|LEDG[9]~output     ; o                ;
+; |DE0|LEDG[9]            ; |DE0|LEDG[9]            ; padout           ;
+; |DE0|SW[0]              ; |DE0|SW[0]              ; padout           ;
+; |DE0|SW[1]              ; |DE0|SW[1]              ; padout           ;
+; |DE0|SW[2]              ; |DE0|SW[2]              ; padout           ;
+; |DE0|SW[3]              ; |DE0|SW[3]              ; padout           ;
+; |DE0|SW[4]              ; |DE0|SW[4]              ; padout           ;
+; |DE0|SW[5]              ; |DE0|SW[5]              ; padout           ;
+; |DE0|SW[6]              ; |DE0|SW[6]              ; padout           ;
+; |DE0|SW[7]              ; |DE0|SW[7]              ; padout           ;
+; |DE0|SW[8]              ; |DE0|SW[8]              ; padout           ;
+; |DE0|SW[9]              ; |DE0|SW[9]              ; padout           ;
+; |DE0|BUTTON[0]          ; |DE0|BUTTON[0]          ; padout           ;
+; |DE0|FL_BYTE_N          ; |DE0|FL_BYTE_N          ; padout           ;
+; |DE0|FL_CE_N            ; |DE0|FL_CE_N            ; padout           ;
+; |DE0|FL_OE_N            ; |DE0|FL_OE_N            ; padout           ;
+; |DE0|FL_RST_N           ; |DE0|FL_RST_N           ; padout           ;
+; |DE0|FL_RY              ; |DE0|FL_RY              ; padout           ;
+; |DE0|FL_WE_N            ; |DE0|FL_WE_N            ; padout           ;
+; |DE0|FL_WP_N            ; |DE0|FL_WP_N            ; padout           ;
+; |DE0|FL_DQ15_AM1        ; |DE0|FL_DQ15_AM1        ; padout           ;
+; |DE0|PS2_KBCLK          ; |DE0|PS2_KBCLK          ; padout           ;
+; |DE0|PS2_KBDAT          ; |DE0|PS2_KBDAT          ; padout           ;
+; |DE0|PS2_MSCLK          ; |DE0|PS2_MSCLK          ; padout           ;
+; |DE0|PS2_MSDAT          ; |DE0|PS2_MSDAT          ; padout           ;
+; |DE0|UART_RXD           ; |DE0|UART_RXD           ; padout           ;
+; |DE0|UART_TXD           ; |DE0|UART_TXD           ; padout           ;
+; |DE0|UART_RTS           ; |DE0|UART_RTS           ; padout           ;
+; |DE0|UART_CTS           ; |DE0|UART_CTS           ; padout           ;
+; |DE0|SD_CLK             ; |DE0|SD_CLK             ; padout           ;
+; |DE0|SD_CMD             ; |DE0|SD_CMD             ; padout           ;
+; |DE0|SD_DAT0            ; |DE0|SD_DAT0            ; padout           ;
+; |DE0|SD_DAT3            ; |DE0|SD_DAT3            ; padout           ;
+; |DE0|SD_WP_N            ; |DE0|SD_WP_N            ; padout           ;
+; |DE0|LCD_RW             ; |DE0|LCD_RW             ; padout           ;
+; |DE0|LCD_RS             ; |DE0|LCD_RS             ; padout           ;
+; |DE0|LCD_EN             ; |DE0|LCD_EN             ; padout           ;
+; |DE0|LCD_BLON           ; |DE0|LCD_BLON           ; padout           ;
+; |DE0|VGA_HS             ; |DE0|VGA_HS             ; padout           ;
+; |DE0|VGA_VS             ; |DE0|VGA_VS             ; padout           ;
+; |DE0|HEX0_DP            ; |DE0|HEX0_DP            ; padout           ;
+; |DE0|HEX1_DP            ; |DE0|HEX1_DP            ; padout           ;
+; |DE0|HEX2_DP            ; |DE0|HEX2_DP            ; padout           ;
+; |DE0|HEX3_DP            ; |DE0|HEX3_DP            ; padout           ;
+; |DE0|DRAM_CAS_N         ; |DE0|DRAM_CAS_N         ; padout           ;
+; |DE0|DRAM_CS_N          ; |DE0|DRAM_CS_N          ; padout           ;
+; |DE0|DRAM_CLK           ; |DE0|DRAM_CLK           ; padout           ;
+; |DE0|DRAM_CKE           ; |DE0|DRAM_CKE           ; padout           ;
+; |DE0|DRAM_BA_0          ; |DE0|DRAM_BA_0          ; padout           ;
+; |DE0|DRAM_BA_1          ; |DE0|DRAM_BA_1          ; padout           ;
+; |DE0|DRAM_LDQM          ; |DE0|DRAM_LDQM          ; padout           ;
+; |DE0|DRAM_UDQM          ; |DE0|DRAM_UDQM          ; padout           ;
+; |DE0|DRAM_RAS_N         ; |DE0|DRAM_RAS_N         ; padout           ;
+; |DE0|DRAM_WE_N          ; |DE0|DRAM_WE_N          ; padout           ;
+; |DE0|CLOCK_50_2         ; |DE0|CLOCK_50_2         ; padout           ;
+; |DE0|FL_ADDR[21]        ; |DE0|FL_ADDR[21]        ; padout           ;
+; |DE0|FL_ADDR[20]        ; |DE0|FL_ADDR[20]        ; padout           ;
+; |DE0|FL_ADDR[19]        ; |DE0|FL_ADDR[19]        ; padout           ;
+; |DE0|FL_ADDR[18]        ; |DE0|FL_ADDR[18]        ; padout           ;
+; |DE0|FL_ADDR[17]        ; |DE0|FL_ADDR[17]        ; padout           ;
+; |DE0|FL_ADDR[16]        ; |DE0|FL_ADDR[16]        ; padout           ;
+; |DE0|FL_ADDR[15]        ; |DE0|FL_ADDR[15]        ; padout           ;
+; |DE0|FL_ADDR[14]        ; |DE0|FL_ADDR[14]        ; padout           ;
+; |DE0|FL_ADDR[13]        ; |DE0|FL_ADDR[13]        ; padout           ;
+; |DE0|FL_ADDR[12]        ; |DE0|FL_ADDR[12]        ; padout           ;
+; |DE0|FL_ADDR[11]        ; |DE0|FL_ADDR[11]        ; padout           ;
+; |DE0|FL_ADDR[10]        ; |DE0|FL_ADDR[10]        ; padout           ;
+; |DE0|FL_ADDR[9]         ; |DE0|FL_ADDR[9]         ; padout           ;
+; |DE0|FL_ADDR[8]         ; |DE0|FL_ADDR[8]         ; padout           ;
+; |DE0|FL_ADDR[7]         ; |DE0|FL_ADDR[7]         ; padout           ;
+; |DE0|FL_ADDR[6]         ; |DE0|FL_ADDR[6]         ; padout           ;
+; |DE0|FL_ADDR[5]         ; |DE0|FL_ADDR[5]         ; padout           ;
+; |DE0|FL_ADDR[4]         ; |DE0|FL_ADDR[4]         ; padout           ;
+; |DE0|FL_ADDR[3]         ; |DE0|FL_ADDR[3]         ; padout           ;
+; |DE0|FL_ADDR[2]         ; |DE0|FL_ADDR[2]         ; padout           ;
+; |DE0|FL_ADDR[1]         ; |DE0|FL_ADDR[1]         ; padout           ;
+; |DE0|FL_ADDR[0]         ; |DE0|FL_ADDR[0]         ; padout           ;
+; |DE0|FL_DQ[14]          ; |DE0|FL_DQ[14]          ; padout           ;
+; |DE0|FL_DQ[13]          ; |DE0|FL_DQ[13]          ; padout           ;
+; |DE0|FL_DQ[12]          ; |DE0|FL_DQ[12]          ; padout           ;
+; |DE0|FL_DQ[11]          ; |DE0|FL_DQ[11]          ; padout           ;
+; |DE0|FL_DQ[10]          ; |DE0|FL_DQ[10]          ; padout           ;
+; |DE0|FL_DQ[9]           ; |DE0|FL_DQ[9]           ; padout           ;
+; |DE0|FL_DQ[8]           ; |DE0|FL_DQ[8]           ; padout           ;
+; |DE0|FL_DQ[7]           ; |DE0|FL_DQ[7]           ; padout           ;
+; |DE0|FL_DQ[6]           ; |DE0|FL_DQ[6]           ; padout           ;
+; |DE0|FL_DQ[5]           ; |DE0|FL_DQ[5]           ; padout           ;
+; |DE0|FL_DQ[4]           ; |DE0|FL_DQ[4]           ; padout           ;
+; |DE0|FL_DQ[3]           ; |DE0|FL_DQ[3]           ; padout           ;
+; |DE0|FL_DQ[2]           ; |DE0|FL_DQ[2]           ; padout           ;
+; |DE0|FL_DQ[1]           ; |DE0|FL_DQ[1]           ; padout           ;
+; |DE0|FL_DQ[0]           ; |DE0|FL_DQ[0]           ; padout           ;
+; |DE0|GPIO0_CLKIN[1]     ; |DE0|GPIO0_CLKIN[1]     ; padout           ;
+; |DE0|GPIO0_CLKIN[0]     ; |DE0|GPIO0_CLKIN[0]     ; padout           ;
+; |DE0|GPIO0_CLKOUT[1]    ; |DE0|GPIO0_CLKOUT[1]    ; padout           ;
+; |DE0|GPIO0_CLKOUT[0]    ; |DE0|GPIO0_CLKOUT[0]    ; padout           ;
+; |DE0|GPIO1_CLKIN[1]     ; |DE0|GPIO1_CLKIN[1]     ; padout           ;
+; |DE0|GPIO1_CLKIN[0]     ; |DE0|GPIO1_CLKIN[0]     ; padout           ;
+; |DE0|GPIO1_CLKOUT[1]    ; |DE0|GPIO1_CLKOUT[1]    ; padout           ;
+; |DE0|GPIO1_CLKOUT[0]    ; |DE0|GPIO1_CLKOUT[0]    ; padout           ;
+; |DE0|GPIO1_D[31]        ; |DE0|GPIO1_D[31]        ; padout           ;
+; |DE0|GPIO1_D[30]        ; |DE0|GPIO1_D[30]        ; padout           ;
+; |DE0|GPIO1_D[29]        ; |DE0|GPIO1_D[29]        ; padout           ;
+; |DE0|GPIO1_D[28]        ; |DE0|GPIO1_D[28]        ; padout           ;
+; |DE0|GPIO1_D[27]        ; |DE0|GPIO1_D[27]        ; padout           ;
+; |DE0|GPIO1_D[26]        ; |DE0|GPIO1_D[26]        ; padout           ;
+; |DE0|GPIO1_D[25]        ; |DE0|GPIO1_D[25]        ; padout           ;
+; |DE0|GPIO1_D[24]        ; |DE0|GPIO1_D[24]        ; padout           ;
+; |DE0|GPIO1_D[23]        ; |DE0|GPIO1_D[23]        ; padout           ;
+; |DE0|GPIO1_D[22]        ; |DE0|GPIO1_D[22]        ; padout           ;
+; |DE0|GPIO1_D[21]        ; |DE0|GPIO1_D[21]        ; padout           ;
+; |DE0|GPIO1_D[20]        ; |DE0|GPIO1_D[20]        ; padout           ;
+; |DE0|GPIO1_D[19]        ; |DE0|GPIO1_D[19]        ; padout           ;
+; |DE0|GPIO1_D[18]        ; |DE0|GPIO1_D[18]        ; padout           ;
+; |DE0|GPIO1_D[17]        ; |DE0|GPIO1_D[17]        ; padout           ;
+; |DE0|GPIO1_D[16]        ; |DE0|GPIO1_D[16]        ; padout           ;
+; |DE0|GPIO1_D[15]        ; |DE0|GPIO1_D[15]        ; padout           ;
+; |DE0|GPIO1_D[14]        ; |DE0|GPIO1_D[14]        ; padout           ;
+; |DE0|GPIO1_D[13]        ; |DE0|GPIO1_D[13]        ; padout           ;
+; |DE0|GPIO1_D[12]        ; |DE0|GPIO1_D[12]        ; padout           ;
+; |DE0|GPIO1_D[11]        ; |DE0|GPIO1_D[11]        ; padout           ;
+; |DE0|GPIO1_D[10]        ; |DE0|GPIO1_D[10]        ; padout           ;
+; |DE0|GPIO1_D[9]         ; |DE0|GPIO1_D[9]         ; padout           ;
+; |DE0|GPIO1_D[8]         ; |DE0|GPIO1_D[8]         ; padout           ;
+; |DE0|GPIO1_D[7]         ; |DE0|GPIO1_D[7]         ; padout           ;
+; |DE0|GPIO1_D[6]         ; |DE0|GPIO1_D[6]         ; padout           ;
+; |DE0|GPIO1_D[5]         ; |DE0|GPIO1_D[5]         ; padout           ;
+; |DE0|GPIO1_D[4]         ; |DE0|GPIO1_D[4]         ; padout           ;
+; |DE0|GPIO1_D[3]         ; |DE0|GPIO1_D[3]         ; padout           ;
+; |DE0|GPIO1_D[2]         ; |DE0|GPIO1_D[2]         ; padout           ;
+; |DE0|GPIO1_D[1]         ; |DE0|GPIO1_D[1]         ; padout           ;
+; |DE0|GPIO1_D[0]         ; |DE0|GPIO1_D[0]         ; padout           ;
+; |DE0|LCD_DATA[7]        ; |DE0|LCD_DATA[7]        ; padout           ;
+; |DE0|LCD_DATA[6]        ; |DE0|LCD_DATA[6]        ; padout           ;
+; |DE0|LCD_DATA[5]        ; |DE0|LCD_DATA[5]        ; padout           ;
+; |DE0|LCD_DATA[4]        ; |DE0|LCD_DATA[4]        ; padout           ;
+; |DE0|LCD_DATA[3]        ; |DE0|LCD_DATA[3]        ; padout           ;
+; |DE0|LCD_DATA[2]        ; |DE0|LCD_DATA[2]        ; padout           ;
+; |DE0|LCD_DATA[1]        ; |DE0|LCD_DATA[1]        ; padout           ;
+; |DE0|LCD_DATA[0]        ; |DE0|LCD_DATA[0]        ; padout           ;
+; |DE0|VGA_G[3]           ; |DE0|VGA_G[3]           ; padout           ;
+; |DE0|VGA_G[2]           ; |DE0|VGA_G[2]           ; padout           ;
+; |DE0|VGA_G[1]           ; |DE0|VGA_G[1]           ; padout           ;
+; |DE0|VGA_G[0]           ; |DE0|VGA_G[0]           ; padout           ;
+; |DE0|VGA_R[3]           ; |DE0|VGA_R[3]           ; padout           ;
+; |DE0|VGA_R[2]           ; |DE0|VGA_R[2]           ; padout           ;
+; |DE0|VGA_R[1]           ; |DE0|VGA_R[1]           ; padout           ;
+; |DE0|VGA_R[0]           ; |DE0|VGA_R[0]           ; padout           ;
+; |DE0|VGA_B[3]           ; |DE0|VGA_B[3]           ; padout           ;
+; |DE0|VGA_B[2]           ; |DE0|VGA_B[2]           ; padout           ;
+; |DE0|VGA_B[1]           ; |DE0|VGA_B[1]           ; padout           ;
+; |DE0|VGA_B[0]           ; |DE0|VGA_B[0]           ; padout           ;
+; |DE0|DRAM_DQ[15]        ; |DE0|DRAM_DQ[15]        ; padout           ;
+; |DE0|DRAM_DQ[14]        ; |DE0|DRAM_DQ[14]        ; padout           ;
+; |DE0|DRAM_DQ[13]        ; |DE0|DRAM_DQ[13]        ; padout           ;
+; |DE0|DRAM_DQ[12]        ; |DE0|DRAM_DQ[12]        ; padout           ;
+; |DE0|DRAM_DQ[11]        ; |DE0|DRAM_DQ[11]        ; padout           ;
+; |DE0|DRAM_DQ[10]        ; |DE0|DRAM_DQ[10]        ; padout           ;
+; |DE0|DRAM_DQ[9]         ; |DE0|DRAM_DQ[9]         ; padout           ;
+; |DE0|DRAM_DQ[8]         ; |DE0|DRAM_DQ[8]         ; padout           ;
+; |DE0|DRAM_DQ[7]         ; |DE0|DRAM_DQ[7]         ; padout           ;
+; |DE0|DRAM_DQ[6]         ; |DE0|DRAM_DQ[6]         ; padout           ;
+; |DE0|DRAM_DQ[5]         ; |DE0|DRAM_DQ[5]         ; padout           ;
+; |DE0|DRAM_DQ[4]         ; |DE0|DRAM_DQ[4]         ; padout           ;
+; |DE0|DRAM_DQ[3]         ; |DE0|DRAM_DQ[3]         ; padout           ;
+; |DE0|DRAM_DQ[2]         ; |DE0|DRAM_DQ[2]         ; padout           ;
+; |DE0|DRAM_DQ[1]         ; |DE0|DRAM_DQ[1]         ; padout           ;
+; |DE0|DRAM_DQ[0]         ; |DE0|DRAM_DQ[0]         ; padout           ;
+; |DE0|DRAM_ADDR[12]      ; |DE0|DRAM_ADDR[12]      ; padout           ;
+; |DE0|DRAM_ADDR[11]      ; |DE0|DRAM_ADDR[11]      ; padout           ;
+; |DE0|DRAM_ADDR[10]      ; |DE0|DRAM_ADDR[10]      ; padout           ;
+; |DE0|DRAM_ADDR[9]       ; |DE0|DRAM_ADDR[9]       ; padout           ;
+; |DE0|DRAM_ADDR[8]       ; |DE0|DRAM_ADDR[8]       ; padout           ;
+; |DE0|DRAM_ADDR[7]       ; |DE0|DRAM_ADDR[7]       ; padout           ;
+; |DE0|DRAM_ADDR[6]       ; |DE0|DRAM_ADDR[6]       ; padout           ;
+; |DE0|DRAM_ADDR[5]       ; |DE0|DRAM_ADDR[5]       ; padout           ;
+; |DE0|DRAM_ADDR[4]       ; |DE0|DRAM_ADDR[4]       ; padout           ;
+; |DE0|DRAM_ADDR[3]       ; |DE0|DRAM_ADDR[3]       ; padout           ;
+; |DE0|DRAM_ADDR[2]       ; |DE0|DRAM_ADDR[2]       ; padout           ;
+; |DE0|DRAM_ADDR[1]       ; |DE0|DRAM_ADDR[1]       ; padout           ;
+; |DE0|DRAM_ADDR[0]       ; |DE0|DRAM_ADDR[0]       ; padout           ;
++-------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |DE0|HEX0_D[6]~output   ; |DE0|HEX0_D[6]~output   ; o                ;
+; |DE0|HEX0_D[5]~output   ; |DE0|HEX0_D[5]~output   ; o                ;
+; |DE0|HEX0_D[4]~output   ; |DE0|HEX0_D[4]~output   ; o                ;
+; |DE0|HEX0_D[3]~output   ; |DE0|HEX0_D[3]~output   ; o                ;
+; |DE0|HEX0_D[2]~output   ; |DE0|HEX0_D[2]~output   ; o                ;
+; |DE0|HEX0_D[1]~output   ; |DE0|HEX0_D[1]~output   ; o                ;
+; |DE0|HEX0_D[0]~output   ; |DE0|HEX0_D[0]~output   ; o                ;
+; |DE0|HEX1_D[6]~output   ; |DE0|HEX1_D[6]~output   ; o                ;
+; |DE0|HEX1_D[5]~output   ; |DE0|HEX1_D[5]~output   ; o                ;
+; |DE0|HEX1_D[4]~output   ; |DE0|HEX1_D[4]~output   ; o                ;
+; |DE0|HEX1_D[3]~output   ; |DE0|HEX1_D[3]~output   ; o                ;
+; |DE0|HEX1_D[2]~output   ; |DE0|HEX1_D[2]~output   ; o                ;
+; |DE0|HEX1_D[1]~output   ; |DE0|HEX1_D[1]~output   ; o                ;
+; |DE0|HEX1_D[0]~output   ; |DE0|HEX1_D[0]~output   ; o                ;
+; |DE0|HEX2_D[6]~output   ; |DE0|HEX2_D[6]~output   ; o                ;
+; |DE0|HEX2_D[5]~output   ; |DE0|HEX2_D[5]~output   ; o                ;
+; |DE0|HEX2_D[4]~output   ; |DE0|HEX2_D[4]~output   ; o                ;
+; |DE0|HEX2_D[3]~output   ; |DE0|HEX2_D[3]~output   ; o                ;
+; |DE0|HEX2_D[2]~output   ; |DE0|HEX2_D[2]~output   ; o                ;
+; |DE0|HEX2_D[1]~output   ; |DE0|HEX2_D[1]~output   ; o                ;
+; |DE0|HEX2_D[0]~output   ; |DE0|HEX2_D[0]~output   ; o                ;
+; |DE0|HEX3_D[6]~output   ; |DE0|HEX3_D[6]~output   ; o                ;
+; |DE0|HEX3_D[5]~output   ; |DE0|HEX3_D[5]~output   ; o                ;
+; |DE0|HEX3_D[4]~output   ; |DE0|HEX3_D[4]~output   ; o                ;
+; |DE0|HEX3_D[3]~output   ; |DE0|HEX3_D[3]~output   ; o                ;
+; |DE0|HEX3_D[2]~output   ; |DE0|HEX3_D[2]~output   ; o                ;
+; |DE0|HEX3_D[1]~output   ; |DE0|HEX3_D[1]~output   ; o                ;
+; |DE0|HEX3_D[0]~output   ; |DE0|HEX3_D[0]~output   ; o                ;
+; |DE0|GPIO0_D[31]~output ; |DE0|GPIO0_D[31]~output ; o                ;
+; |DE0|GPIO0_D[30]~output ; |DE0|GPIO0_D[30]~output ; o                ;
+; |DE0|GPIO0_D[29]~output ; |DE0|GPIO0_D[29]~output ; o                ;
+; |DE0|GPIO0_D[28]~output ; |DE0|GPIO0_D[28]~output ; o                ;
+; |DE0|GPIO0_D[27]~output ; |DE0|GPIO0_D[27]~output ; o                ;
+; |DE0|GPIO0_D[26]~output ; |DE0|GPIO0_D[26]~output ; o                ;
+; |DE0|GPIO0_D[25]~output ; |DE0|GPIO0_D[25]~output ; o                ;
+; |DE0|GPIO0_D[24]~output ; |DE0|GPIO0_D[24]~output ; o                ;
+; |DE0|GPIO0_D[23]~output ; |DE0|GPIO0_D[23]~output ; o                ;
+; |DE0|GPIO0_D[22]~output ; |DE0|GPIO0_D[22]~output ; o                ;
+; |DE0|GPIO0_D[21]~output ; |DE0|GPIO0_D[21]~output ; o                ;
+; |DE0|GPIO0_D[20]~output ; |DE0|GPIO0_D[20]~output ; o                ;
+; |DE0|GPIO0_D[19]~output ; |DE0|GPIO0_D[19]~output ; o                ;
+; |DE0|GPIO0_D[18]~output ; |DE0|GPIO0_D[18]~output ; o                ;
+; |DE0|GPIO0_D[17]~output ; |DE0|GPIO0_D[17]~output ; o                ;
+; |DE0|GPIO0_D[16]~output ; |DE0|GPIO0_D[16]~output ; o                ;
+; |DE0|GPIO0_D[15]~output ; |DE0|GPIO0_D[15]~output ; o                ;
+; |DE0|GPIO0_D[14]~output ; |DE0|GPIO0_D[14]~output ; o                ;
+; |DE0|GPIO0_D[13]~output ; |DE0|GPIO0_D[13]~output ; o                ;
+; |DE0|GPIO0_D[12]~output ; |DE0|GPIO0_D[12]~output ; o                ;
+; |DE0|GPIO0_D[11]~output ; |DE0|GPIO0_D[11]~output ; o                ;
+; |DE0|GPIO0_D[10]~output ; |DE0|GPIO0_D[10]~output ; o                ;
+; |DE0|GPIO0_D[9]~output  ; |DE0|GPIO0_D[9]~output  ; o                ;
+; |DE0|GPIO0_D[8]~output  ; |DE0|GPIO0_D[8]~output  ; o                ;
+; |DE0|GPIO0_D[7]~output  ; |DE0|GPIO0_D[7]~output  ; o                ;
+; |DE0|GPIO0_D[6]~output  ; |DE0|GPIO0_D[6]~output  ; o                ;
+; |DE0|GPIO0_D[5]~output  ; |DE0|GPIO0_D[5]~output  ; o                ;
+; |DE0|GPIO0_D[4]~output  ; |DE0|GPIO0_D[4]~output  ; o                ;
+; |DE0|GPIO0_D[3]~output  ; |DE0|GPIO0_D[3]~output  ; o                ;
+; |DE0|GPIO0_D[2]~output  ; |DE0|GPIO0_D[2]~output  ; o                ;
+; |DE0|GPIO0_D[1]~output  ; |DE0|GPIO0_D[1]~output  ; o                ;
+; |DE0|GPIO0_D[0]~output  ; |DE0|GPIO0_D[0]~output  ; o                ;
+; |DE0|LEDG[0]~output     ; |DE0|LEDG[0]~output     ; o                ;
+; |DE0|LEDG[0]            ; |DE0|LEDG[0]            ; padout           ;
+; |DE0|LEDG[1]~output     ; |DE0|LEDG[1]~output     ; o                ;
+; |DE0|LEDG[1]            ; |DE0|LEDG[1]            ; padout           ;
+; |DE0|LEDG[2]~output     ; |DE0|LEDG[2]~output     ; o                ;
+; |DE0|LEDG[2]            ; |DE0|LEDG[2]            ; padout           ;
+; |DE0|LEDG[3]~output     ; |DE0|LEDG[3]~output     ; o                ;
+; |DE0|LEDG[3]            ; |DE0|LEDG[3]            ; padout           ;
+; |DE0|LEDG[4]~output     ; |DE0|LEDG[4]~output     ; o                ;
+; |DE0|LEDG[4]            ; |DE0|LEDG[4]            ; padout           ;
+; |DE0|LEDG[5]~output     ; |DE0|LEDG[5]~output     ; o                ;
+; |DE0|LEDG[5]            ; |DE0|LEDG[5]            ; padout           ;
+; |DE0|LEDG[6]~output     ; |DE0|LEDG[6]~output     ; o                ;
+; |DE0|LEDG[6]            ; |DE0|LEDG[6]            ; padout           ;
+; |DE0|LEDG[7]~output     ; |DE0|LEDG[7]~output     ; o                ;
+; |DE0|LEDG[7]            ; |DE0|LEDG[7]            ; padout           ;
+; |DE0|LEDG[8]~output     ; |DE0|LEDG[8]~output     ; o                ;
+; |DE0|LEDG[8]            ; |DE0|LEDG[8]            ; padout           ;
+; |DE0|LEDG[9]~output     ; |DE0|LEDG[9]~output     ; o                ;
+; |DE0|LEDG[9]            ; |DE0|LEDG[9]            ; padout           ;
+; |DE0|SW[0]              ; |DE0|SW[0]              ; padout           ;
+; |DE0|SW[1]              ; |DE0|SW[1]              ; padout           ;
+; |DE0|SW[2]              ; |DE0|SW[2]              ; padout           ;
+; |DE0|SW[3]              ; |DE0|SW[3]              ; padout           ;
+; |DE0|SW[4]              ; |DE0|SW[4]              ; padout           ;
+; |DE0|SW[5]              ; |DE0|SW[5]              ; padout           ;
+; |DE0|SW[6]              ; |DE0|SW[6]              ; padout           ;
+; |DE0|SW[7]              ; |DE0|SW[7]              ; padout           ;
+; |DE0|SW[8]              ; |DE0|SW[8]              ; padout           ;
+; |DE0|SW[9]              ; |DE0|SW[9]              ; padout           ;
+; |DE0|BUTTON[0]          ; |DE0|BUTTON[0]          ; padout           ;
+; |DE0|FL_BYTE_N          ; |DE0|FL_BYTE_N          ; padout           ;
+; |DE0|FL_CE_N            ; |DE0|FL_CE_N            ; padout           ;
+; |DE0|FL_OE_N            ; |DE0|FL_OE_N            ; padout           ;
+; |DE0|FL_RST_N           ; |DE0|FL_RST_N           ; padout           ;
+; |DE0|FL_RY              ; |DE0|FL_RY              ; padout           ;
+; |DE0|FL_WE_N            ; |DE0|FL_WE_N            ; padout           ;
+; |DE0|FL_WP_N            ; |DE0|FL_WP_N            ; padout           ;
+; |DE0|FL_DQ15_AM1        ; |DE0|FL_DQ15_AM1        ; padout           ;
+; |DE0|PS2_KBCLK          ; |DE0|PS2_KBCLK          ; padout           ;
+; |DE0|PS2_KBDAT          ; |DE0|PS2_KBDAT          ; padout           ;
+; |DE0|PS2_MSCLK          ; |DE0|PS2_MSCLK          ; padout           ;
+; |DE0|PS2_MSDAT          ; |DE0|PS2_MSDAT          ; padout           ;
+; |DE0|UART_RXD           ; |DE0|UART_RXD           ; padout           ;
+; |DE0|UART_TXD           ; |DE0|UART_TXD           ; padout           ;
+; |DE0|UART_RTS           ; |DE0|UART_RTS           ; padout           ;
+; |DE0|UART_CTS           ; |DE0|UART_CTS           ; padout           ;
+; |DE0|SD_CLK             ; |DE0|SD_CLK             ; padout           ;
+; |DE0|SD_CMD             ; |DE0|SD_CMD             ; padout           ;
+; |DE0|SD_DAT0            ; |DE0|SD_DAT0            ; padout           ;
+; |DE0|SD_DAT3            ; |DE0|SD_DAT3            ; padout           ;
+; |DE0|SD_WP_N            ; |DE0|SD_WP_N            ; padout           ;
+; |DE0|LCD_RW             ; |DE0|LCD_RW             ; padout           ;
+; |DE0|LCD_RS             ; |DE0|LCD_RS             ; padout           ;
+; |DE0|LCD_EN             ; |DE0|LCD_EN             ; padout           ;
+; |DE0|LCD_BLON           ; |DE0|LCD_BLON           ; padout           ;
+; |DE0|VGA_HS             ; |DE0|VGA_HS             ; padout           ;
+; |DE0|VGA_VS             ; |DE0|VGA_VS             ; padout           ;
+; |DE0|HEX0_DP            ; |DE0|HEX0_DP            ; padout           ;
+; |DE0|HEX1_DP            ; |DE0|HEX1_DP            ; padout           ;
+; |DE0|HEX2_DP            ; |DE0|HEX2_DP            ; padout           ;
+; |DE0|HEX3_DP            ; |DE0|HEX3_DP            ; padout           ;
+; |DE0|DRAM_CAS_N         ; |DE0|DRAM_CAS_N         ; padout           ;
+; |DE0|DRAM_CS_N          ; |DE0|DRAM_CS_N          ; padout           ;
+; |DE0|DRAM_CLK           ; |DE0|DRAM_CLK           ; padout           ;
+; |DE0|DRAM_CKE           ; |DE0|DRAM_CKE           ; padout           ;
+; |DE0|DRAM_BA_0          ; |DE0|DRAM_BA_0          ; padout           ;
+; |DE0|DRAM_BA_1          ; |DE0|DRAM_BA_1          ; padout           ;
+; |DE0|DRAM_LDQM          ; |DE0|DRAM_LDQM          ; padout           ;
+; |DE0|DRAM_UDQM          ; |DE0|DRAM_UDQM          ; padout           ;
+; |DE0|DRAM_RAS_N         ; |DE0|DRAM_RAS_N         ; padout           ;
+; |DE0|DRAM_WE_N          ; |DE0|DRAM_WE_N          ; padout           ;
+; |DE0|CLOCK_50_2         ; |DE0|CLOCK_50_2         ; padout           ;
+; |DE0|FL_ADDR[21]        ; |DE0|FL_ADDR[21]        ; padout           ;
+; |DE0|FL_ADDR[20]        ; |DE0|FL_ADDR[20]        ; padout           ;
+; |DE0|FL_ADDR[19]        ; |DE0|FL_ADDR[19]        ; padout           ;
+; |DE0|FL_ADDR[18]        ; |DE0|FL_ADDR[18]        ; padout           ;
+; |DE0|FL_ADDR[17]        ; |DE0|FL_ADDR[17]        ; padout           ;
+; |DE0|FL_ADDR[16]        ; |DE0|FL_ADDR[16]        ; padout           ;
+; |DE0|FL_ADDR[15]        ; |DE0|FL_ADDR[15]        ; padout           ;
+; |DE0|FL_ADDR[14]        ; |DE0|FL_ADDR[14]        ; padout           ;
+; |DE0|FL_ADDR[13]        ; |DE0|FL_ADDR[13]        ; padout           ;
+; |DE0|FL_ADDR[12]        ; |DE0|FL_ADDR[12]        ; padout           ;
+; |DE0|FL_ADDR[11]        ; |DE0|FL_ADDR[11]        ; padout           ;
+; |DE0|FL_ADDR[10]        ; |DE0|FL_ADDR[10]        ; padout           ;
+; |DE0|FL_ADDR[9]         ; |DE0|FL_ADDR[9]         ; padout           ;
+; |DE0|FL_ADDR[8]         ; |DE0|FL_ADDR[8]         ; padout           ;
+; |DE0|FL_ADDR[7]         ; |DE0|FL_ADDR[7]         ; padout           ;
+; |DE0|FL_ADDR[6]         ; |DE0|FL_ADDR[6]         ; padout           ;
+; |DE0|FL_ADDR[5]         ; |DE0|FL_ADDR[5]         ; padout           ;
+; |DE0|FL_ADDR[4]         ; |DE0|FL_ADDR[4]         ; padout           ;
+; |DE0|FL_ADDR[3]         ; |DE0|FL_ADDR[3]         ; padout           ;
+; |DE0|FL_ADDR[2]         ; |DE0|FL_ADDR[2]         ; padout           ;
+; |DE0|FL_ADDR[1]         ; |DE0|FL_ADDR[1]         ; padout           ;
+; |DE0|FL_ADDR[0]         ; |DE0|FL_ADDR[0]         ; padout           ;
+; |DE0|FL_DQ[14]          ; |DE0|FL_DQ[14]          ; padout           ;
+; |DE0|FL_DQ[13]          ; |DE0|FL_DQ[13]          ; padout           ;
+; |DE0|FL_DQ[12]          ; |DE0|FL_DQ[12]          ; padout           ;
+; |DE0|FL_DQ[11]          ; |DE0|FL_DQ[11]          ; padout           ;
+; |DE0|FL_DQ[10]          ; |DE0|FL_DQ[10]          ; padout           ;
+; |DE0|FL_DQ[9]           ; |DE0|FL_DQ[9]           ; padout           ;
+; |DE0|FL_DQ[8]           ; |DE0|FL_DQ[8]           ; padout           ;
+; |DE0|FL_DQ[7]           ; |DE0|FL_DQ[7]           ; padout           ;
+; |DE0|FL_DQ[6]           ; |DE0|FL_DQ[6]           ; padout           ;
+; |DE0|FL_DQ[5]           ; |DE0|FL_DQ[5]           ; padout           ;
+; |DE0|FL_DQ[4]           ; |DE0|FL_DQ[4]           ; padout           ;
+; |DE0|FL_DQ[3]           ; |DE0|FL_DQ[3]           ; padout           ;
+; |DE0|FL_DQ[2]           ; |DE0|FL_DQ[2]           ; padout           ;
+; |DE0|FL_DQ[1]           ; |DE0|FL_DQ[1]           ; padout           ;
+; |DE0|FL_DQ[0]           ; |DE0|FL_DQ[0]           ; padout           ;
+; |DE0|GPIO0_CLKIN[1]     ; |DE0|GPIO0_CLKIN[1]     ; padout           ;
+; |DE0|GPIO0_CLKIN[0]     ; |DE0|GPIO0_CLKIN[0]     ; padout           ;
+; |DE0|GPIO0_CLKOUT[1]    ; |DE0|GPIO0_CLKOUT[1]    ; padout           ;
+; |DE0|GPIO0_CLKOUT[0]    ; |DE0|GPIO0_CLKOUT[0]    ; padout           ;
+; |DE0|GPIO1_CLKIN[1]     ; |DE0|GPIO1_CLKIN[1]     ; padout           ;
+; |DE0|GPIO1_CLKIN[0]     ; |DE0|GPIO1_CLKIN[0]     ; padout           ;
+; |DE0|GPIO1_CLKOUT[1]    ; |DE0|GPIO1_CLKOUT[1]    ; padout           ;
+; |DE0|GPIO1_CLKOUT[0]    ; |DE0|GPIO1_CLKOUT[0]    ; padout           ;
+; |DE0|GPIO1_D[31]        ; |DE0|GPIO1_D[31]        ; padout           ;
+; |DE0|GPIO1_D[30]        ; |DE0|GPIO1_D[30]        ; padout           ;
+; |DE0|GPIO1_D[29]        ; |DE0|GPIO1_D[29]        ; padout           ;
+; |DE0|GPIO1_D[28]        ; |DE0|GPIO1_D[28]        ; padout           ;
+; |DE0|GPIO1_D[27]        ; |DE0|GPIO1_D[27]        ; padout           ;
+; |DE0|GPIO1_D[26]        ; |DE0|GPIO1_D[26]        ; padout           ;
+; |DE0|GPIO1_D[25]        ; |DE0|GPIO1_D[25]        ; padout           ;
+; |DE0|GPIO1_D[24]        ; |DE0|GPIO1_D[24]        ; padout           ;
+; |DE0|GPIO1_D[23]        ; |DE0|GPIO1_D[23]        ; padout           ;
+; |DE0|GPIO1_D[22]        ; |DE0|GPIO1_D[22]        ; padout           ;
+; |DE0|GPIO1_D[21]        ; |DE0|GPIO1_D[21]        ; padout           ;
+; |DE0|GPIO1_D[20]        ; |DE0|GPIO1_D[20]        ; padout           ;
+; |DE0|GPIO1_D[19]        ; |DE0|GPIO1_D[19]        ; padout           ;
+; |DE0|GPIO1_D[18]        ; |DE0|GPIO1_D[18]        ; padout           ;
+; |DE0|GPIO1_D[17]        ; |DE0|GPIO1_D[17]        ; padout           ;
+; |DE0|GPIO1_D[16]        ; |DE0|GPIO1_D[16]        ; padout           ;
+; |DE0|GPIO1_D[15]        ; |DE0|GPIO1_D[15]        ; padout           ;
+; |DE0|GPIO1_D[14]        ; |DE0|GPIO1_D[14]        ; padout           ;
+; |DE0|GPIO1_D[13]        ; |DE0|GPIO1_D[13]        ; padout           ;
+; |DE0|GPIO1_D[12]        ; |DE0|GPIO1_D[12]        ; padout           ;
+; |DE0|GPIO1_D[11]        ; |DE0|GPIO1_D[11]        ; padout           ;
+; |DE0|GPIO1_D[10]        ; |DE0|GPIO1_D[10]        ; padout           ;
+; |DE0|GPIO1_D[9]         ; |DE0|GPIO1_D[9]         ; padout           ;
+; |DE0|GPIO1_D[8]         ; |DE0|GPIO1_D[8]         ; padout           ;
+; |DE0|GPIO1_D[7]         ; |DE0|GPIO1_D[7]         ; padout           ;
+; |DE0|GPIO1_D[6]         ; |DE0|GPIO1_D[6]         ; padout           ;
+; |DE0|GPIO1_D[5]         ; |DE0|GPIO1_D[5]         ; padout           ;
+; |DE0|GPIO1_D[4]         ; |DE0|GPIO1_D[4]         ; padout           ;
+; |DE0|GPIO1_D[3]         ; |DE0|GPIO1_D[3]         ; padout           ;
+; |DE0|GPIO1_D[2]         ; |DE0|GPIO1_D[2]         ; padout           ;
+; |DE0|GPIO1_D[1]         ; |DE0|GPIO1_D[1]         ; padout           ;
+; |DE0|GPIO1_D[0]         ; |DE0|GPIO1_D[0]         ; padout           ;
+; |DE0|LCD_DATA[7]        ; |DE0|LCD_DATA[7]        ; padout           ;
+; |DE0|LCD_DATA[6]        ; |DE0|LCD_DATA[6]        ; padout           ;
+; |DE0|LCD_DATA[5]        ; |DE0|LCD_DATA[5]        ; padout           ;
+; |DE0|LCD_DATA[4]        ; |DE0|LCD_DATA[4]        ; padout           ;
+; |DE0|LCD_DATA[3]        ; |DE0|LCD_DATA[3]        ; padout           ;
+; |DE0|LCD_DATA[2]        ; |DE0|LCD_DATA[2]        ; padout           ;
+; |DE0|LCD_DATA[1]        ; |DE0|LCD_DATA[1]        ; padout           ;
+; |DE0|LCD_DATA[0]        ; |DE0|LCD_DATA[0]        ; padout           ;
+; |DE0|VGA_G[3]           ; |DE0|VGA_G[3]           ; padout           ;
+; |DE0|VGA_G[2]           ; |DE0|VGA_G[2]           ; padout           ;
+; |DE0|VGA_G[1]           ; |DE0|VGA_G[1]           ; padout           ;
+; |DE0|VGA_G[0]           ; |DE0|VGA_G[0]           ; padout           ;
+; |DE0|VGA_R[3]           ; |DE0|VGA_R[3]           ; padout           ;
+; |DE0|VGA_R[2]           ; |DE0|VGA_R[2]           ; padout           ;
+; |DE0|VGA_R[1]           ; |DE0|VGA_R[1]           ; padout           ;
+; |DE0|VGA_R[0]           ; |DE0|VGA_R[0]           ; padout           ;
+; |DE0|VGA_B[3]           ; |DE0|VGA_B[3]           ; padout           ;
+; |DE0|VGA_B[2]           ; |DE0|VGA_B[2]           ; padout           ;
+; |DE0|VGA_B[1]           ; |DE0|VGA_B[1]           ; padout           ;
+; |DE0|VGA_B[0]           ; |DE0|VGA_B[0]           ; padout           ;
+; |DE0|DRAM_DQ[15]        ; |DE0|DRAM_DQ[15]        ; padout           ;
+; |DE0|DRAM_DQ[14]        ; |DE0|DRAM_DQ[14]        ; padout           ;
+; |DE0|DRAM_DQ[13]        ; |DE0|DRAM_DQ[13]        ; padout           ;
+; |DE0|DRAM_DQ[12]        ; |DE0|DRAM_DQ[12]        ; padout           ;
+; |DE0|DRAM_DQ[11]        ; |DE0|DRAM_DQ[11]        ; padout           ;
+; |DE0|DRAM_DQ[10]        ; |DE0|DRAM_DQ[10]        ; padout           ;
+; |DE0|DRAM_DQ[9]         ; |DE0|DRAM_DQ[9]         ; padout           ;
+; |DE0|DRAM_DQ[8]         ; |DE0|DRAM_DQ[8]         ; padout           ;
+; |DE0|DRAM_DQ[7]         ; |DE0|DRAM_DQ[7]         ; padout           ;
+; |DE0|DRAM_DQ[6]         ; |DE0|DRAM_DQ[6]         ; padout           ;
+; |DE0|DRAM_DQ[5]         ; |DE0|DRAM_DQ[5]         ; padout           ;
+; |DE0|DRAM_DQ[4]         ; |DE0|DRAM_DQ[4]         ; padout           ;
+; |DE0|DRAM_DQ[3]         ; |DE0|DRAM_DQ[3]         ; padout           ;
+; |DE0|DRAM_DQ[2]         ; |DE0|DRAM_DQ[2]         ; padout           ;
+; |DE0|DRAM_DQ[1]         ; |DE0|DRAM_DQ[1]         ; padout           ;
+; |DE0|DRAM_DQ[0]         ; |DE0|DRAM_DQ[0]         ; padout           ;
+; |DE0|DRAM_ADDR[12]      ; |DE0|DRAM_ADDR[12]      ; padout           ;
+; |DE0|DRAM_ADDR[11]      ; |DE0|DRAM_ADDR[11]      ; padout           ;
+; |DE0|DRAM_ADDR[10]      ; |DE0|DRAM_ADDR[10]      ; padout           ;
+; |DE0|DRAM_ADDR[9]       ; |DE0|DRAM_ADDR[9]       ; padout           ;
+; |DE0|DRAM_ADDR[8]       ; |DE0|DRAM_ADDR[8]       ; padout           ;
+; |DE0|DRAM_ADDR[7]       ; |DE0|DRAM_ADDR[7]       ; padout           ;
+; |DE0|DRAM_ADDR[6]       ; |DE0|DRAM_ADDR[6]       ; padout           ;
+; |DE0|DRAM_ADDR[5]       ; |DE0|DRAM_ADDR[5]       ; padout           ;
+; |DE0|DRAM_ADDR[4]       ; |DE0|DRAM_ADDR[4]       ; padout           ;
+; |DE0|DRAM_ADDR[3]       ; |DE0|DRAM_ADDR[3]       ; padout           ;
+; |DE0|DRAM_ADDR[2]       ; |DE0|DRAM_ADDR[2]       ; padout           ;
+; |DE0|DRAM_ADDR[1]       ; |DE0|DRAM_ADDR[1]       ; padout           ;
+; |DE0|DRAM_ADDR[0]       ; |DE0|DRAM_ADDR[0]       ; padout           ;
++-------------------------+-------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Apr 16 15:19:54 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off DE0 -c DE0
+Info: Using vector source file "F:/DE0_basis/DE0.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "RX_FSM:u2|state" in design.
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_BYTE_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_CE_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_OE_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_RST_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_RY"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_WE_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_WP_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ15_AM1"
+Warning: Can't find signal in vector source file for input pin "|DE0|PS2_KBCLK"
+Warning: Can't find signal in vector source file for input pin "|DE0|PS2_KBDAT"
+Warning: Can't find signal in vector source file for input pin "|DE0|PS2_MSCLK"
+Warning: Can't find signal in vector source file for input pin "|DE0|PS2_MSDAT"
+Warning: Can't find signal in vector source file for input pin "|DE0|UART_RXD"
+Warning: Can't find signal in vector source file for input pin "|DE0|UART_TXD"
+Warning: Can't find signal in vector source file for input pin "|DE0|UART_RTS"
+Warning: Can't find signal in vector source file for input pin "|DE0|UART_CTS"
+Warning: Can't find signal in vector source file for input pin "|DE0|SD_CLK"
+Warning: Can't find signal in vector source file for input pin "|DE0|SD_CMD"
+Warning: Can't find signal in vector source file for input pin "|DE0|SD_DAT0"
+Warning: Can't find signal in vector source file for input pin "|DE0|SD_DAT3"
+Warning: Can't find signal in vector source file for input pin "|DE0|SD_WP_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_RW"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_RS"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_EN"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_BLON"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_HS"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_VS"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_DP"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_DP"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_DP"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_DP"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_CAS_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_CS_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_CLK"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_CKE"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_BA_0"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_BA_1"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_LDQM"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_UDQM"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_RAS_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_WE_N"
+Warning: Can't find signal in vector source file for input pin "|DE0|CLOCK_50_2"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[21]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[20]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[19]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[18]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[17]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[16]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[15]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[14]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[13]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[9]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_ADDR[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[14]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[13]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[9]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|FL_DQ[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_CLKIN[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_CLKIN[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_CLKOUT[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_CLKOUT[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_CLKIN[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_CLKIN[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_CLKOUT[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_CLKOUT[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[31]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[30]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[29]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[28]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[27]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[26]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[25]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[24]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[23]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[22]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[21]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[20]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[19]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[18]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[17]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[16]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[15]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[14]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[13]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[9]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO1_D[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|LCD_DATA[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_G[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_G[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_G[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_G[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_R[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_R[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_R[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_R[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_B[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_B[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_B[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|VGA_B[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[15]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[14]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[13]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[9]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_DQ[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[9]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[7]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|DRAM_ADDR[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX0_D[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX1_D[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX2_D[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|HEX3_D[0]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[31]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[30]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[29]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[28]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[27]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[26]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[25]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[24]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[23]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[22]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[21]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[20]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[19]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[18]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[17]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[16]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[15]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[14]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[13]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[12]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[11]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[10]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[8]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[6]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[5]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[4]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[3]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[2]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[1]"
+Warning: Can't find signal in vector source file for input pin "|DE0|GPIO0_D[0]"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       1.15 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II Simulator was successful. 0 errors, 227 warnings
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Thu Apr 16 15:20:06 2015
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
+
+

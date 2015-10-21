@@ -1,0 +1,17 @@
+-- testing the WR, D0, D1, NO, CJ, JU, and EQ instructions
+
+CODE	NO TAGS	INSTRUCTION
+---------------------------
+0000	00 TAG1	WR 00 to 0
+0101	01	WR 01 to 1
+0201	02	WR 01 to 2
+50F1	03	EQ 1 to 0 in 0
+20FF	04	D0 0
+51F2	05	EQ 2 to 1 in 1
+31FF	06	D1 1
+710A	07	CJ on 1 to TAG2
+50F2	08	EQ 2 to 0 in 0
+30FF	09	D1 0
+700C	0A TAG2	CJ on 0 to TAG3
+6F00	0B 	JU to TAG1
+FFFF	0C TAG3	NOP

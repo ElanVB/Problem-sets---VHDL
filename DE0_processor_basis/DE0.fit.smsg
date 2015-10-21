@@ -1,0 +1,6 @@
+Warning: Feature LogicLock is not available with your current license
+Warning: Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning: Synopsys Design Constraints File file not found: 'DE0.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Warning: Following 190 pins must meet Altera requirements for 3.3V, 3.0V, and 2.5V interfaces
+Warning: Following 57 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results

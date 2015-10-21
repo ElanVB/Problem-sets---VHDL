@@ -1,0 +1,10 @@
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: The following nodes have both tri-state and non-tri-state drivers
+Warning: The following bidir pins have no drivers
+Warning: The following tri-state nodes are fed by constants
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+Warning: TRI or OPNDRN buffers permanently enabled
+Warning: Output pins are stuck at VCC or GND
+Critical Warning: Ignored Power-Up Level option on the following registers

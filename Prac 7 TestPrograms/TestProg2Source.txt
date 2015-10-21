@@ -1,0 +1,19 @@
+-- testing the WR, CP, D0, D1, NO, and JU instructions
+
+CODE	NO TAGS	INSTRUCTION
+---------------------------
+0067	00	WR 67 to 0
+01EF	01	WR EF to 1
+10F2	02 TAG1	CP 0 to 2
+11F3	03	CP 1 to 3
+22FF	04	D0 2
+33FF	05	D1 3
+FFFF	06	NO
+FFFF	07	NO
+FFFF	08	NO
+FFFF	09	NO
+10F3	0A	CP 0 to 3
+11F2	0B	CP 1 to 2
+22FF	0C	D0 2
+33FF	0D	D1 3
+6F02	0E	JU TAG1

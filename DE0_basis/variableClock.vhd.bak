@@ -1,0 +1,20 @@
+ENTITY GenericClockDivider IS
+generic (divisor : integer range 0 to 1000 := 1); -- # of inputs
+PORT (inCLK : IN STD_LOGIC;
+outCLK : OUT STD_LOGIC);
+END GenericClockDivider;
+ARCHITECTURE anything OF GenericClockDivider IS
+BEGIN
+PROCESS (CLK)
+VARIABLE: CLKCount := 0;
+BEGIN
+IF inCLK’EVENT AND inCLK = ‘1’ THEN
+IF (clkCount > divisor) then
+outclk <= not inCLK;
+-- invert subCLK
+CLKCount <= 0;
+ELSE
+CLKCount <= clkCount + 1;
+END IF;
+END IF
+END anything;

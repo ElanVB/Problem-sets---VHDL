@@ -1,0 +1,659 @@
+Analysis & Synthesis report for DE0
+Thu Apr 30 09:57:29 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. Removed Registers Triggering Further Register Optimizations
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "BYTE_REGISTER:specreg0"
+ 11. Port Connectivity Checks: "SEG_DISPLAY:disp0|D_FLIPFLOP:ff0"
+ 12. Port Connectivity Checks: "SEG_DISPLAY:disp0"
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 30 09:57:29 2015        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; DE0                                          ;
+; Top-level Entity Name              ; DE0                                          ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 48                                           ;
+;     Total combinational functions  ; 48                                           ;
+;     Dedicated logic registers      ; 27                                           ;
+; Total registers                    ; 27                                           ;
+; Total pins                         ; 252                                          ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                        ; DE0                ; DE0                ;
+; Family name                                                  ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+; COMPARATOR.vhd                   ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/COMPARATOR.vhd         ;
+; ADDER.vhd                        ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/ADDER.vhd              ;
+; CLK_SOURCE.vhd                   ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/CLK_SOURCE.vhd         ;
+; CONTROLLER_FSM.vhd               ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/CONTROLLER_FSM.vhd     ;
+; REGISTER_BANK.vhd                ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/REGISTER_BANK.vhd      ;
+; BYTE_REGISTER.vhd                ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/BYTE_REGISTER.vhd      ;
+; D_FLIPFLOP.vhd                   ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/D_FLIPFLOP.vhd         ;
+; 7SEG_DISPLAY.vhd                 ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/7SEG_DISPLAY.vhd       ;
+; DE0.vhd                          ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/DE0.vhd                ;
+; INSTRUCTION_READER.vhd           ; yes             ; User VHDL File  ; C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/INSTRUCTION_READER.vhd ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 48             ;
+;                                             ;                ;
+; Total combinational functions               ; 48             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 13             ;
+;     -- 3 input functions                    ; 9              ;
+;     -- <=2 input functions                  ; 26             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 23             ;
+;     -- arithmetic mode                      ; 25             ;
+;                                             ;                ;
+; Total registers                             ; 27             ;
+;     -- Dedicated logic registers            ; 27             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 252            ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 494            ;
+; Average fan-out                             ; 0.78           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; |DE0                       ; 48 (0)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 252  ; 0            ; |DE0                 ; work         ;
+;    |CLK_SOURCE:clk0|       ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0|CLK_SOURCE:clk0 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                         ;
++-------------------------------------------------------------------------+--------------------------------------------------+
+; Register name                                                           ; Reason for Removal                               ;
++-------------------------------------------------------------------------+--------------------------------------------------+
+; INSTRUCTION_READER:instr0|FL_CE_N                                       ; Merged with INSTRUCTION_READER:instr0|FL_OE_N    ;
+; INSTRUCTION_READER:instr0|FL_ADDR[9..12,14..21]                         ; Merged with INSTRUCTION_READER:instr0|FL_ADDR[8] ;
+; INSTRUCTION_READER:instr0|FL_ADDR[8]                                    ; Stuck at GND due to stuck port data_in           ;
+; SEG_DISPLAY:disp0|D_FLIPFLOP:ff0|CURR_STATE                             ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg15|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg14|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg13|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg12|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg11|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop7|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop6|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop5|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop4|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop3|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop2|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop1|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg10|D_FLIPFLOP:flipflop0|CURR_STATE ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg9|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg8|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg7|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg6|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg5|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg4|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg3|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg2|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg1|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop7|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop6|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop5|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop4|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop3|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop2|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop1|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop0|CURR_STATE  ; Stuck at GND due to stuck port clock_enable      ;
+; INSTRUCTION_READER:instr0|MEM_CLK_COUNT[1..2]                           ; Stuck at GND due to stuck port clock_enable      ;
+; INSTRUCTION_READER:instr0|SET_INSTR_NUMBER_FLAG                         ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[1..7]                        ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|MEM_CLK_COUNT[0]                              ; Stuck at GND due to stuck port clock_enable      ;
+; INSTRUCTION_READER:instr0|DO_RESET_INSTR                                ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[0]                           ; Stuck at GND due to stuck port clock             ;
+; COMPARATOR:comp0|NUM2[0..7]                                             ; Stuck at GND due to stuck port clock_enable      ;
+; COMPARATOR:comp0|NUM1[0..7]                                             ; Stuck at GND due to stuck port clock_enable      ;
+; ADDER:arith0|NUM2[0..7]                                                 ; Stuck at GND due to stuck port clock_enable      ;
+; ADDER:arith0|NUM1[0..7]                                                 ; Stuck at GND due to stuck port clock_enable      ;
+; SEG_DISPLAY:disp0|HEX0Q[0..6]                                           ; Stuck at VCC due to stuck port clock_enable      ;
+; SEG_DISPLAY:disp0|HEX1Q[0..6]                                           ; Stuck at VCC due to stuck port clock_enable      ;
+; SEG_DISPLAY:disp0|HEX2Q[0..6]                                           ; Stuck at VCC due to stuck port clock_enable      ;
+; SEG_DISPLAY:disp0|HEX3Q[0..6]                                           ; Stuck at VCC due to stuck port clock_enable      ;
+; INSTRUCTION_READER:instr0|MEM_CLK                                       ; Stuck at GND due to stuck port clock_enable      ;
+; INSTRUCTION_READER:instr0|TEMP_BYTE1[1..3]                              ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|TEMP_BYTE2[0..7]                              ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|FL_DQ15_AM1~reg0                              ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|FL_OE_N                                       ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|FL_ADDR[0..7,13]                              ; Stuck at GND due to stuck port clock             ;
+; INSTRUCTION_READER:instr0|TEMP_BYTE1[0]                                 ; Stuck at GND due to stuck port clock             ;
+; Total Number of Removed Registers = 240                                 ;                                                  ;
++-------------------------------------------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                          ;
++-------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------+
+; Register name                                   ; Reason for Removal             ; Registers Removed due to This Register                                            ;
++-------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------+
+; INSTRUCTION_READER:instr0|SET_INSTR_NUMBER_FLAG ; Stuck at GND                   ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[7],                                    ;
+;                                                 ; due to stuck port clock        ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[6],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[5],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[4],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[3],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[2],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[1],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|INSTR_NUMBER_SIG[0],                                    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_ADDR[0], INSTRUCTION_READER:instr0|FL_ADDR[1],       ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_ADDR[2], INSTRUCTION_READER:instr0|FL_ADDR[3],       ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_ADDR[4], INSTRUCTION_READER:instr0|FL_ADDR[5],       ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_ADDR[6], INSTRUCTION_READER:instr0|FL_ADDR[7]        ;
+; INSTRUCTION_READER:instr0|MEM_CLK               ; Stuck at GND                   ; INSTRUCTION_READER:instr0|TEMP_BYTE1[1], INSTRUCTION_READER:instr0|TEMP_BYTE1[2], ;
+;                                                 ; due to stuck port clock_enable ; INSTRUCTION_READER:instr0|TEMP_BYTE1[3], INSTRUCTION_READER:instr0|TEMP_BYTE2[0], ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|TEMP_BYTE2[1], INSTRUCTION_READER:instr0|TEMP_BYTE2[2], ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|TEMP_BYTE2[3], INSTRUCTION_READER:instr0|TEMP_BYTE2[4], ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|TEMP_BYTE2[5], INSTRUCTION_READER:instr0|TEMP_BYTE2[6], ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|TEMP_BYTE2[7],                                          ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_DQ15_AM1~reg0, INSTRUCTION_READER:instr0|FL_OE_N,    ;
+;                                                 ;                                ; INSTRUCTION_READER:instr0|FL_ADDR[13], INSTRUCTION_READER:instr0|TEMP_BYTE1[0]    ;
++-------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BYTE_REGISTER:specreg0"                                                               ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                             ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+; pr_n    ; Input ; Info     ; Stuck at VCC                                                                        ;
+; q[7..4] ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "SEG_DISPLAY:disp0|D_FLIPFLOP:ff0" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; oe   ; Input ; Info     ; Stuck at VCC                       ;
+; pr_n ; Input ; Info     ; Stuck at VCC                       ;
++------+-------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SEG_DISPLAY:disp0"                                                                                           ;
++--------+-------+------------------+-----------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity         ; Details                                                                                             ;
++--------+-------+------------------+-----------------------------------------------------------------------------------------------------+
+; hex0_d ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Output" but port on entity declared as "Bidir" ;
+; hex1_d ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Output" but port on entity declared as "Bidir" ;
+; hex2_d ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Output" but port on entity declared as "Bidir" ;
+; hex3_d ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Output" but port on entity declared as "Bidir" ;
++--------+-------+------------------+-----------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Apr 30 09:57:27 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0 -c DE0
+Info: Found 2 design units, including 1 entities, in source file COMPARATOR.vhd
+    Info: Found design unit 1: COMPARATOR-STRUCTURE
+    Info: Found entity 1: COMPARATOR
+Info: Found 2 design units, including 1 entities, in source file ADDER.vhd
+    Info: Found design unit 1: ADDER-STRUCTURE
+    Info: Found entity 1: ADDER
+Info: Found 2 design units, including 1 entities, in source file CLK_SOURCE.vhd
+    Info: Found design unit 1: CLK_SOURCE-STRUCTURE
+    Info: Found entity 1: CLK_SOURCE
+Info: Found 2 design units, including 1 entities, in source file CONTROLLER_FSM.vhd
+    Info: Found design unit 1: CONTROLLER_FSM-STRUCTURE
+    Info: Found entity 1: CONTROLLER_FSM
+Info: Found 2 design units, including 1 entities, in source file REGISTER_BANK.vhd
+    Info: Found design unit 1: REGISTER_BANK-STRUCTURE
+    Info: Found entity 1: REGISTER_BANK
+Info: Found 2 design units, including 1 entities, in source file BYTE_REGISTER.vhd
+    Info: Found design unit 1: BYTE_REGISTER-STRUCTURE
+    Info: Found entity 1: BYTE_REGISTER
+Info: Found 2 design units, including 1 entities, in source file D_FLIPFLOP.vhd
+    Info: Found design unit 1: D_FLIPFLOP-STRUCTURE
+    Info: Found entity 1: D_FLIPFLOP
+Info: Found 2 design units, including 1 entities, in source file 7SEG_DISPLAY.vhd
+    Info: Found design unit 1: SEG_DISPLAY-STRUCTURE
+    Info: Found entity 1: SEG_DISPLAY
+Info: Found 2 design units, including 1 entities, in source file DE0.vhd
+    Info: Found design unit 1: DE0-structure
+    Info: Found entity 1: DE0
+Info: Found 2 design units, including 1 entities, in source file INSTRUCTION_READER.vhd
+    Info: Found design unit 1: INSTRUCTION_READER-STRUCTURE
+    Info: Found entity 1: INSTRUCTION_READER
+Info: Elaborating entity "DE0" for the top level hierarchy
+Info: Elaborating entity "INSTRUCTION_READER" for hierarchy "INSTRUCTION_READER:instr0"
+Warning (10631): VHDL Process Statement warning at INSTRUCTION_READER.vhd(114): inferring latch(es) for signal or variable "NEXT_INSTR_NUMBER", which holds its previous value in one or more paths through the process
+Info: Elaborating entity "REGISTER_BANK" for hierarchy "REGISTER_BANK:bank0"
+Info: Elaborating entity "BYTE_REGISTER" for hierarchy "REGISTER_BANK:bank0|BYTE_REGISTER:reg0"
+Info: Elaborating entity "D_FLIPFLOP" for hierarchy "REGISTER_BANK:bank0|BYTE_REGISTER:reg0|D_FLIPFLOP:flipflop0"
+Info: Elaborating entity "SEG_DISPLAY" for hierarchy "SEG_DISPLAY:disp0"
+Info: Elaborating entity "CONTROLLER_FSM" for hierarchy "CONTROLLER_FSM:contr0"
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(14): used implicit default value for signal "COMP_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(15): used implicit default value for signal "COMP_OE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(16): used implicit default value for signal "COMP_SEL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(17): used implicit default value for signal "SPEC_REG_WR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(18): used implicit default value for signal "SPEC_REG_RE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(19): used implicit default value for signal "ARITH_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(20): used implicit default value for signal "ARITH_OE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(21): used implicit default value for signal "ARITH_SEL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(23): used implicit default value for signal "RESET_INSTR_NUMBER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(24): used implicit default value for signal "SET_INSTR_NUMBER" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(26): used implicit default value for signal "INSTR_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(27): used implicit default value for signal "INSTR_OE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(28): used implicit default value for signal "SEL_ADDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(29): used implicit default value for signal "REG_CPY_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(30): used implicit default value for signal "REG_WR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(31): used implicit default value for signal "REG_RE_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(32): used implicit default value for signal "REG_PR_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(33): used implicit default value for signal "REG_CL_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(34): used implicit default value for signal "DISP_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(35): used implicit default value for signal "DISP_BYTE_SELECT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(36): used implicit default value for signal "DISP_PWR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CONTROLLER_FSM.vhd(37): used implicit default value for signal "INCR_INSTR_NUMBER_NE" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info: Elaborating entity "ADDER" for hierarchy "ADDER:arith0"
+Info: Elaborating entity "COMPARATOR" for hierarchy "COMPARATOR:comp0"
+Info: Elaborating entity "CLK_SOURCE" for hierarchy "CLK_SOURCE:clk0"
+Info: Generated suppressed messages file C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/DE0.map.smsg
+Warning: Design contains 132 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "BUTTON[2]"
+    Warning (15610): No output dependent on input pin "BUTTON[1]"
+    Warning (15610): No output dependent on input pin "BUTTON[0]"
+    Warning (15610): No output dependent on input pin "PS2_KBCLK"
+    Warning (15610): No output dependent on input pin "PS2_KBDAT"
+    Warning (15610): No output dependent on input pin "PS2_MSCLK"
+    Warning (15610): No output dependent on input pin "PS2_MSDAT"
+    Warning (15610): No output dependent on input pin "UART_RXD"
+    Warning (15610): No output dependent on input pin "UART_TXD"
+    Warning (15610): No output dependent on input pin "UART_RTS"
+    Warning (15610): No output dependent on input pin "UART_CTS"
+    Warning (15610): No output dependent on input pin "SD_CLK"
+    Warning (15610): No output dependent on input pin "SD_CMD"
+    Warning (15610): No output dependent on input pin "SD_DAT0"
+    Warning (15610): No output dependent on input pin "SD_DAT3"
+    Warning (15610): No output dependent on input pin "SD_WP_N"
+    Warning (15610): No output dependent on input pin "LCD_RW"
+    Warning (15610): No output dependent on input pin "LCD_RS"
+    Warning (15610): No output dependent on input pin "LCD_EN"
+    Warning (15610): No output dependent on input pin "LCD_BLON"
+    Warning (15610): No output dependent on input pin "VGA_HS"
+    Warning (15610): No output dependent on input pin "VGA_VS"
+    Warning (15610): No output dependent on input pin "DRAM_CAS_N"
+    Warning (15610): No output dependent on input pin "DRAM_CS_N"
+    Warning (15610): No output dependent on input pin "DRAM_CLK"
+    Warning (15610): No output dependent on input pin "DRAM_CKE"
+    Warning (15610): No output dependent on input pin "DRAM_BA_0"
+    Warning (15610): No output dependent on input pin "DRAM_BA_1"
+    Warning (15610): No output dependent on input pin "DRAM_LDQM"
+    Warning (15610): No output dependent on input pin "DRAM_UDQM"
+    Warning (15610): No output dependent on input pin "DRAM_RAS_N"
+    Warning (15610): No output dependent on input pin "DRAM_WE_N"
+    Warning (15610): No output dependent on input pin "CLOCK_50_2"
+    Warning (15610): No output dependent on input pin "GPIO0_CLKIN[1]"
+    Warning (15610): No output dependent on input pin "GPIO0_CLKIN[0]"
+    Warning (15610): No output dependent on input pin "GPIO0_CLKOUT[1]"
+    Warning (15610): No output dependent on input pin "GPIO0_CLKOUT[0]"
+    Warning (15610): No output dependent on input pin "GPIO1_CLKIN[1]"
+    Warning (15610): No output dependent on input pin "GPIO1_CLKIN[0]"
+    Warning (15610): No output dependent on input pin "GPIO1_CLKOUT[1]"
+    Warning (15610): No output dependent on input pin "GPIO1_CLKOUT[0]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[31]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[30]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[29]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[28]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[27]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[26]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[25]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[24]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[23]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[22]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[21]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[20]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[19]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[18]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[17]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[16]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[15]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[14]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[13]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[12]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[11]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[10]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[9]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[8]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[7]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[6]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[5]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[4]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[3]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[2]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[1]"
+    Warning (15610): No output dependent on input pin "GPIO1_D[0]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[7]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[6]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[5]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[4]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[3]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[2]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[1]"
+    Warning (15610): No output dependent on input pin "LCD_DATA[0]"
+    Warning (15610): No output dependent on input pin "VGA_G[3]"
+    Warning (15610): No output dependent on input pin "VGA_G[2]"
+    Warning (15610): No output dependent on input pin "VGA_G[1]"
+    Warning (15610): No output dependent on input pin "VGA_G[0]"
+    Warning (15610): No output dependent on input pin "VGA_R[3]"
+    Warning (15610): No output dependent on input pin "VGA_R[2]"
+    Warning (15610): No output dependent on input pin "VGA_R[1]"
+    Warning (15610): No output dependent on input pin "VGA_R[0]"
+    Warning (15610): No output dependent on input pin "VGA_B[3]"
+    Warning (15610): No output dependent on input pin "VGA_B[2]"
+    Warning (15610): No output dependent on input pin "VGA_B[1]"
+    Warning (15610): No output dependent on input pin "VGA_B[0]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[15]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[14]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[13]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[12]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[11]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[10]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[9]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[8]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[7]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[6]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[5]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[4]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[3]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[2]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[1]"
+    Warning (15610): No output dependent on input pin "DRAM_DQ[0]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[12]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[11]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[10]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[9]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[8]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[7]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[6]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[5]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[4]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[3]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[2]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[1]"
+    Warning (15610): No output dependent on input pin "DRAM_ADDR[0]"
+Info: Implemented 314 device resources after synthesis - the final resource count might be different
+    Info: Implemented 133 input pins
+    Info: Implemented 62 output pins
+    Info: Implemented 57 bidirectional pins
+    Info: Implemented 62 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 156 warnings
+    Info: Peak virtual memory: 233 megabytes
+    Info: Processing ended: Thu Apr 30 09:57:29 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/rdb/Dropbox/2015/RS214/DE0 Projects/DE0_processor_basis/DE0.map.smsg.
+
+
